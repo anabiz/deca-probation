@@ -1,0 +1,34 @@
+{
+  "freelancer": [
+    {
+      "firstName": "ikechukwu",
+      "lastName": "dancer",
+      "phone": "09064532133",
+      "id": 8
+    },
+    {
+      "firstName": "nnamani",
+      "lastName": "web designer",
+      "phone": "08056443278",
+      "id": 9
+    },
+    {
+      "firstName": "john",
+      "lastName": "fashion",
+      "phone": "090533214",
+      "id": 10
+    },
+    {
+      "firstName": "emeka",
+      "lastName": "welder",
+      "phone": "08034068810",
+      "id": 21
+    }
+  ],
+  "admin": [
+    {
+      "password": "08065661350",
+      "username": "anabiz"
+    }
+  ]
+}
