@@ -1,28 +1,61 @@
 {
   "freelancer": [
     {
-      "firstName": "ikechukwu",
-      "lastName": "dancer",
+      "name": "ikechukwu",
+      "job": "dancer",
       "phone": "09064532133",
+      "email": "anabizconcept9@gmail.com",
+      "password": "0806566",
+      "profile": "ggggggg",
       "id": 8
     },
     {
-      "firstName": "nnamani",
-      "lastName": "web designer",
+      "name": "nnamani",
+      "job": "web designer",
       "phone": "08056443278",
+      "email": "anabizconcept9@gmail.com",
+      "password": "0806566",
+      "profile": "ggggggg",
       "id": 9
     },
     {
-      "firstName": "john",
-      "lastName": "fashion",
+      "name": "john",
+      "job": "fashion",
       "phone": "090533214",
+      "email": "anabizconcept9@gmail.com",
+      "password": "0806566",
+      "profile": "ggggggg",
       "id": 10
     },
     {
-      "firstName": "emeka",
-      "lastName": "welder",
+      "name": "emeka",
+      "job": "welder",
       "phone": "08034068810",
+      "email": "anabizconcept9@gmail.com",
+      "password": "0806566",
+      "profile": "ggggggg",
       "id": 21
+    },
+    {
+      "name": "iwuji Anayo",
+      "job": "electrician",
+      "phone": "08065661350",
+      "profile": "i am a professional in my field with 10 years working experience",
+      "id": 22
+    },
+    {
+      "name": "iwuji Anayo",
+      "job": "electrician",
+      "phone": "08065661350",
+      "profile": "i am a professional in my field with 10 years working experience",
+      "id": 23
+    },
+    {
+      "name": "iwuji Anayo",
+      "job": "electrician",
+      "phone": "08065661350",
+      "profile": "i am a professional in my field with 10 years working experience",
+      "id": 24
     }
   ],
   "admin": [
