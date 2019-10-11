@@ -6,16 +6,24 @@ $(function(){
     var $job = $('#job');
     var $phone = $('#phone');
     var $profile = $('#profile');
-    var $email = ('#email');
-    var $password = ('#pwd');
-    console.log("gggg");
+    var $email = $('#email');
+    var $password = $('#pwd');
+    //var $mail=$("input[name='email']").val();
+    
+
     $('#button').on('click', function(){      
         console.log("ggpppppppppppppgg");
+        
+        console.log($email.val());
+        
     var freelance = {
         name: $name.val(),
         job: $job.val(),
         phone: $phone.val(),
+        email: $email.val(),
+        password:$password.val(),
         profile: $profile.val(),
+
         
     }
 

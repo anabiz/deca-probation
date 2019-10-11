@@ -5,6 +5,7 @@ $(function(){
     var $free = $('.display-freelancer');
     var id =JSON.parse(localStorage.getItem('myid'));
     console.log(id);
+    var $logout = $('#logout');
 
 
     $.ajax({
@@ -28,4 +29,13 @@ $(function(){
             alert('error getting your data');
         }
     })
+
+   
 })
+
+$('#logout').on('click', function(){      
+    console.log("ggpppppppppppppgg");
+   localStorage.removeItem('myid');
+    window.location.href="landingpage.html";
+
+});
