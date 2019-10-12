@@ -2,6 +2,7 @@ console.log('welcome to dashboard');
 console.log(localStorage.getItem('myid'));
 
 $(function(){
+    var $span = $('#span');
     var $free = $('.display-freelancer');
     var id =JSON.parse(localStorage.getItem('myid'));
     console.log(id);
@@ -13,12 +14,13 @@ $(function(){
         url: 'http://localhost:3000/freelancer/' + id ,
         success: function(freelancer){
             console.log('success', freelancer);
+            $span.text(freelancer.name);
 
             $free.append("<div>" +
             "<p>"+ "<strong>firstname: </strong>" + freelancer.name+"</p>" +
-            "<p>"+ "<strong>lastname: </strong>"+ freelancer.job+"</p>" +
-            "<p>"+ "<strong>lastname: </strong>"+ freelancer.phone+"</p>" +
-            "<p>"+ "<strong>lastname: </strong>"+ freelancer.profile+"</p>" +
+            "<p>"+ "<strong>Job: </strong>"+ freelancer.job+"</p>" +
+            "<p>"+ "<strong>Your phone Number: </strong>"+ freelancer.phone+"</p>" +
+            "<p>"+ "<strong>Your Profile: </strong>"+ freelancer.profile+"</p>" +
             "<p>"+ "<strong>id: </strong>"+ freelancer.id+"</p>" +
             "<hr></hr>"+
            
