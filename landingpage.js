@@ -20,7 +20,7 @@ $(function(){
             console.log('success', freelancers);
             $.each(freelancers, function(i, freelancer){
                 //displayFreelancers(freelancer);
-                $free.append("<div>" +
+                $free.append("<div class='col-sm-4' style='border:20px'>" +
                 "<p>"+ "<strong>firstname: </strong>" + freelancer.name+"</p>" +
                 "<p>"+ "<strong>lastname: </strong>"+ freelancer.job+"</p>" +
                 "<p>"+ "<strong>lastname: </strong>"+ freelancer.phone+"</p>" +
@@ -36,4 +36,42 @@ $(function(){
             alert('error getting data');
         }
     })
+
+    $(document).on('click', '#ict', function () {
+        console.log("ggpppppppppppppgg");
+        window.location.href="template/ict.html"
+    
+    });
+
+    $(document).on('click', '#fashion', function () {
+        console.log("ggpppppppppppppgg");
+        window.location.href="template/fashion.html"
+    
+    });
+
+    $(document).on('click', '#agric', function () {
+        console.log("ggpppppppppppppgg");
+        window.location.href="template/agric.html"
+    
+    });
+
+    $(document).on('click', '#builder', function () {
+        console.log("ggpppppppppppppgg");
+        window.location.href="template/builder.html"
+    
+    });
+
+    $(document).on('click', '#teacher', function () {
+        console.log("ggpppppppppppppgg");
+        window.location.href="template/teacher.html"
+    
+    });
+
+    $(document).on('click', '#others', function () {
+        console.log("ggpppppppppppppgg");
+        window.location.href="template/others.html"
+    
+    });
+
+   
 })

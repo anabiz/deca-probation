@@ -18,7 +18,7 @@ $(function(){
                 $.each(freelancers, function(i, freelancer){
                     //displayFreelancers(freelancer);
                    console.log(freelancer.password);
-                   if(freelancer.password==$password.val() && freelancer.email==$email.val()){
+                   if(freelancer.password==$password.val() && freelancer.email==$email.val()) { 
                     localStorage.setItem('myid', JSON.stringify(freelancer.id));
                     window.location.href="dashboard.html";
                     return -1;
@@ -26,7 +26,7 @@ $(function(){
                    }
   
                 })
-                alert("incorrect email or password");  
+            
             },
             error: function(){
                 alert('error getting data');
