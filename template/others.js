@@ -11,15 +11,15 @@ $(function(){
                     //displayFreelancers(freelancer);
                     if((freelancer.job !=="agriculture")&&(freelancer.job !=="teacher")&&(freelancer.job !=="builder")&&(freelancer.job !=="fashion")&&(freelancer.job !=="web design")) {
                     $free.append(
-                        "<div class='col-sm-6 card' style='width: 18rem; margin-right:50px;'>"+
+                        "<div class='col-sm-6 card' style='width: 18rem; margin-right:50px;margin-bottom:50px;'>"+
                         "<img class='card-img-top' src='../images/teacher.jpg' style='width: 18rem;' alt='Card image cap'>"+
                         "<div class='card-body'>"+
                           "<h5 class='card-title'>Card title</h5>"+
-                          "<p  class='card-text'>"+ "<strong>firstname: </strong>" + freelancer.name+"</p>" +
-                          "<p  class='card-text'>"+ "<strong>lastname: </strong>"+ freelancer.job+"</p>" +
-                          "<p  class='card-text'>"+ "<strong>lastname: </strong>"+ freelancer.phone+"</p>" +
+                          "<p  class='card-text'>"+ "<strong>Name: </strong>" + freelancer.name+"</p>" +
+                          "<p  class='card-text'>"+ "<strong>Job: </strong>"+ freelancer.job+"</p>" +
+                          "<p  class='card-text'>"+ "<strong>Phone: </strong>"+ freelancer.phone+"</p>" +
                          
-                          "<a href='#' id='butt' class='btn btn-primary' data-id=" + freelancer.id + ">Go somewhere</a>"+
+                          "<a href='#' id='butt' class='btn btn-primary' data-id=" + freelancer.id + ">View Profile</a>"+
                          "</div>"+
                       "</div>"
              

@@ -40,12 +40,12 @@ $(function(){
                         "</p>" +
 
                         "<p>" + 
-                            "<strong>Your Profile: </strong>"+ "<span class='noedit profile'>" + freelancer.email + "</span>" +
+                            "<strong>Your Email: </strong>"+ "<span class='noedit profile'>" + freelancer.email + "</span>" +
                             
                         "</p>" +
 
                         "<p>"+
-                            "<strong>Email: </strong>" + "<span class='noedit email'>" + freelancer.profile + "</span>" +
+                            "<strong>Your Profile: </strong>" + "<span class='noedit email'>" + freelancer.profile + "</span>" +
                             
                         "</p>" +
 
