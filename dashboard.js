@@ -149,28 +149,31 @@ $(document).on('click', '.remove', function () {
     });
 
 });
-
+var counter = 0;
 var $booking = $('#booking');
 $.ajax({
     type: 'GET',
-    url: 'http://localhost:3000/admin',
+    url: 'http://localhost:3000/bookings',
     success: function(freelancers){
         console.log('success', freelancers);
         $.each(freelancers, function(i, freelancer){
 
-            if(freelancer.id==id2){
+            if(freelancer.bookingid == id2){
+                counter +=1;
+                console.log( freelancer.bookingid);
+                //console.log( freelancer);
        $booking.append(
         "<div class='col-sm-4' style='height:200px'>" + 
                        
                     "<div>" +
                         "<p>"+
-                            "<strong>Name: </strong>" + "<span class='noedit name'>" + freelancer.name+ "</span>"+
+                            "<strong>Name: </strong>" + "<span class='noedit name'>" + freelancer.project+ "</span>"+
                             "<input class='edit name' />" +
                             
                         "</p>" +
 
                         "<p>"+ 
-                            "<strong>Job: </strong>"+ "<span class='noedit job'>" + freelancer.job + "</span>"+
+                            "<strong>Job: </strong>"+ "<span class='noedit job'>" + freelancer.name + "</span>"+
                             "<input class='edit job' />" +
                         "</p>" +
                       
@@ -180,19 +183,18 @@ $.ajax({
                             "<strong>Email: </strong>" + "<span class='noedit email'>" + freelancer.email + "</span>" +
                             "<input class='edit email' />" +
                         "</p>" +
-
-                        "<p>"+
-                            "<strong>Password: </strong>" + "<span class='noedit password'>" + freelancer.password + "</span>" +
-                            "<input class='edit password' />" +
-                        "</p>" +
    
                         "</div>" +
 
                        
           
                     "</div>" );
-       }$booking.text("Sorry, no bookings for now.");
+       }
        });
+       console.log(counter);
+       if(counter==0){
+        $booking.text("Sorry, no bookings for now.");
+       }
         
     },
 });

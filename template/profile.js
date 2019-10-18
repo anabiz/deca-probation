@@ -13,7 +13,7 @@ $(function(){
 
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/freelancer/8',
+        url: 'http://localhost:3000/freelancer/' + id1,
         success: function(freelancer){
             console.log('success', freelancer);
             $myname.text(freelancer.name);
@@ -107,7 +107,8 @@ $(function(){
         var dat = {
             name:a,
             email:b,
-            project:c
+            project:c,
+            bookingid: id1
         
         };
         console.log(dat);
@@ -116,9 +117,9 @@ $(function(){
         
 
         $.ajax({
-            type: 'PUT',
-            url: 'http://localhost:3000/freelancer/8',
-            data:JSON.stringify($jdata1),
+            type: 'POST',
+            url: 'http://localhost:3000/bookings',
+            data:dat,
 
             success: function(freelancer){
                 console.log('success', freelancer);
@@ -141,3 +142,6 @@ $(function(){
 
 
 });
+
+
+

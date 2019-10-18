@@ -1,25 +1,7 @@
 {
   "freelancer": [
     {
-      "name": "ikechukwu",
-      "job": "teacher",
-      "phone": "09064532133",
-      "email": "anabizconcept9@gmail.com",
-      "booking": [
-        {
-          "name": "chima solomon",
-          "email": "amara@gmail.com",
-          "project": "ffghokk"
-        },
-        {
-          "name": "solomon",
-          "email": "amara2019@gmail.com",
-          "project": "ffghokkkkkkkk"
-        }
-      ],
-      "password": "99999",
-      "profile": "ggggggg",
-      "image": "koala.jpg",
+      "{\"image\":\"anabiz1.jpg\",\"name\":\"iwuji Anayo\",\"job\":\"agriculture\",\"phone\":\"07056432122\",\"email\":\"anabizconcept9@gmail.com\",\"profile\":\"i am a professional in my field with 10 years working experience\",\"password\":\"99999\",\"id\":131}": "",
       "id": 8
     },
     {
@@ -600,7 +582,7 @@
       "id": 154
     }
   ],
-  "admin": [
+  "bookings": [
     {
       "email": "anabizconcept@gmail.com",
       "password": "8888",
@@ -682,6 +664,62 @@
       "email": "anabizconcept9@gmail.com",
       "project": "ffghokk",
       "id": "111"
+    },
+    {
+      "name": "anabiz farm",
+      "email": "anabizconcept9@gmail.com",
+      "project": "ewewrrerwrerwrw",
+      "bookingid": "131",
+      "id": "0nLIsfb"
+    },
+    {
+      "name": "anayo anthony",
+      "email": "anabizconcept9@gmail.com",
+      "project": "ytyhdhserssrf",
+      "bookingid": "131",
+      "id": "Ylg4Ibr"
+    },
+    {
+      "name": "iwuji Anayo",
+      "email": "anabizconcept@gmail.com",
+      "project": "iiuyuyiouo9i;ip;oip",
+      "bookingid": "130",
+      "id": "bGL_-CT"
+    },
+    {
+      "name": "iwuji ",
+      "email": "anabizconcept@gmail.com",
+      "project": "iuuuuuuuuuuuuuuuuuuuuuuuu",
+      "bookingid": "130",
+      "id": "aLcI2KP"
+    },
+    {
+      "name": "ekene chukwu",
+      "email": "anabizconcept@gmail.com",
+      "project": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+      "bookingid": "114",
+      "id": "qLg38Um"
+    },
+    {
+      "name": "emeka gin",
+      "email": "endurancenkechi@gmail.com",
+      "project": "school app",
+      "bookingid": "131",
+      "id": "2iQ0wCO"
+    },
+    {
+      "name": "anabiz farm",
+      "email": "anthony_anayo@gmail.com",
+      "project": "development of pig farmer's app",
+      "bookingid": "131",
+      "id": "C1G_KUP"
+    },
+    {
+      "name": "iwuji Anayo",
+      "email": "anabizconcept9@gmail.com",
+      "project": "iiuyuyiouo9i;ip;oip",
+      "bookingid": "109",
+      "id": "JCF-1mn"
     }
   ]
 }
