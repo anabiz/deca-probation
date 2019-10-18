@@ -1,5 +1,5 @@
 $(function(){
-    var $free = $('.display-freelancers');
+    var $free = $('#test');
 
     var freeTemplate = "" + 
     "<div>" +
@@ -15,28 +15,24 @@ $(function(){
 
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/freelancer',
-        success: function(freelancers){
-            console.log('success', freelancers);
-            $.each(freelancers, function(i, freelancer){
-                //displayFreelancers(freelancer);
-                $free.append("<div class='col-sm-4' style='border:20px'>" +
-                "<p>"+ "<strong>firstname: </strong>" + freelancer.name+"</p>" +
-                "<p>"+ "<strong>lastname: </strong>"+ freelancer.job+"</p>" +
-                "<p>"+ "<strong>lastname: </strong>"+ freelancer.phone+"</p>" +
-                "<p>"+ "<strong>lastname: </strong>"+ freelancer.profile+"</p>" +
-                "<p>"+ "<strong>id: </strong>"+ freelancer.id+"</p>" +
-                "<hr></hr>"+
-               
-                "</div>"
-            )
-            })
+        url: 'http://localhost:3000/freelancer/8',
+        success: function(freelancer){
+            //console.log('success', freelancer);
+           
+            //console.log( freelancer.booking[0].comment);
+            //freelancer.booking[0].job="teacher";
+            //console.log( freelancer.booking[0].job);
+            //console.log(freelancer);
+
+           
+        
         },
         error: function(){
             alert('error getting data');
         }
     })
 
+   
     $(document).on('click', '#ict', function () {
         console.log("ggpppppppppppppgg");
         window.location.href="template/ict.html"

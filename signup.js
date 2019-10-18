@@ -11,8 +11,9 @@ $(function(){
     //var $mail=$("input[name='email']").val();
     
 
-    $('#button').on('click', function(){      
-        console.log("ggpppppppppppppgg");
+   
+    $('#myForm').submit(function(e) {
+        e.preventDefault();
         
         console.log($email.val());
         

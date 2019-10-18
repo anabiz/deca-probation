@@ -2,31 +2,33 @@ console.log('welcome to dashboard');
 console.log(localStorage.getItem('myid'));
 
 $(function(){
+    
     var $span = $('#span');
     var $titl = $('#titl');
     var $free = $('.display-freelancer');
-    var id =JSON.parse(localStorage.getItem('myid'));
-    console.log(id);
+    var id2 =JSON.parse(localStorage.getItem('myid'));
+    console.log(id2);
     var $logout = $('#logout');
 
 
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/freelancer/' + id ,
+        url: 'http://localhost:3000/freelancer/' + id2 ,
         success: function(freelancer){
             console.log('success', freelancer);
             $span.text(freelancer.name);
 
             $free.append(
-                "<div class='row' style='height:200px'>" + 
+                "<div class='row' style='height:200px; margin-bottom:50px;'>" + 
 
                     "<div class='col-sm-3'>" +
-                        "<img style='height:150px; width:150px; border-radius:50px' src=" + freelancer.image + ">" +
+                        "<img style='height:150px; width:150px; border-radius:50px' src='images/"+ freelancer.image + "'>" +
+                        "<input class='edit image' />" +
                     "</div>" +
        
                     "<div class='col-sm-9'>" +
                         "<p>"+
-                            "<strong>firstname: </strong>" + "<span class='noedit name'>" + freelancer.name+ "</span>"+
+                            "<strong>Name: </strong>" + "<span class='noedit name'>" + freelancer.name+ "</span>"+
                             "<input class='edit name' />" +
                             
                         "</p>" +
@@ -65,7 +67,8 @@ $(function(){
                        "<button style='margin:20px' class='saveEdit edit'>Save </button>" +
                        "<button style='margin:20px' class='cancelEdit edit' style='list'> Cancel</button>" +
                        "</div>" +
-                        "<hr></hr>"+
+                        "<hr style='color:green;>"+
+                        "<hr style='color:red;'>"+
                      "</div>" +
           
                 "</div>" );
@@ -82,6 +85,7 @@ $(document).on('click', '.editfreelancer', function () {
     console.log($('span.name').html());
     $('.edit').show();
     $('.noedit').hide();
+    $('input.image').val($('img.src').html());
     $('input.name').val($('span.name').html());
     $('input.job').val($('span.job').html());
     $('input.phone').val($('span.phone').html());
@@ -93,6 +97,7 @@ $(document).on('click', '.editfreelancer', function () {
 $(document).on('click', '.saveEdit', function () {
     console.log($('Input.name').val());
     var freelancer = {
+        image:$('input.image').val(),
         name:$('Input.name').val(),
         job:$('Input.job').val(),
         phone:$('Input.phone').val(),
@@ -103,7 +108,7 @@ $(document).on('click', '.saveEdit', function () {
 
     $.ajax({
         type: 'PUT',
-        url: 'http://localhost:3000/freelancer/' + id ,
+        url: 'http://localhost:3000/freelancer/' + id2 ,
         data:freelancer,
         success: function(freelancer){
             console.log('success', freelancer);
@@ -131,17 +136,75 @@ $(document).on('click', '.remove', function () {
 
     $.ajax({
         type: 'DELETE',
-        url: 'http://localhost:3000/freelancer/' + id ,
+        url: 'http://localhost:3000/freelancer/' + id2 ,
         success: function(freelancer){
             $titl.text('Goodbye');
             console.log('mmmmmmmmmmmmmm');
+            $('#button1').hide();
             $('.row').remove();
-
+            window.location.href="login.html";
+           
 
         }
     });
 
 });
+
+var $booking = $('#booking');
+$.ajax({
+    type: 'GET',
+    url: 'http://localhost:3000/admin',
+    success: function(freelancers){
+        console.log('success', freelancers);
+        $.each(freelancers, function(i, freelancer){
+
+            if(freelancer.id==id2){
+       $booking.append(
+        "<div class='col-sm-4' style='height:200px'>" + 
+                       
+                    "<div>" +
+                        "<p>"+
+                            "<strong>Name: </strong>" + "<span class='noedit name'>" + freelancer.name+ "</span>"+
+                            "<input class='edit name' />" +
+                            
+                        "</p>" +
+
+                        "<p>"+ 
+                            "<strong>Job: </strong>"+ "<span class='noedit job'>" + freelancer.job + "</span>"+
+                            "<input class='edit job' />" +
+                        "</p>" +
+                      
+                        "</p>" +
+
+                        "<p>"+
+                            "<strong>Email: </strong>" + "<span class='noedit email'>" + freelancer.email + "</span>" +
+                            "<input class='edit email' />" +
+                        "</p>" +
+
+                        "<p>"+
+                            "<strong>Password: </strong>" + "<span class='noedit password'>" + freelancer.password + "</span>" +
+                            "<input class='edit password' />" +
+                        "</p>" +
+   
+                        "</div>" +
+
+                       
+          
+                    "</div>" );
+       }$booking.text("Sorry, no bookings for now.");
+       });
+        
+    },
+});
+
+$(document).on('click', '#button1', function (e) {
+    e.preventDefault();
+    console.log('mmmmmmmmmmmmmm');
+    $('#booking').toggle("slow");
+
+});
+
+
 
 
 });

@@ -2,13 +2,29 @@ $(function(){
     var $email = $('#email');
     var $password = $('#pwd');
     console.log("ouytrteeff");
-    
 
 
-    $('#button').on('click', function(){ 
 
-        console.log($email.val(), $password.val()); 
-        console.log("ggpppppppppppppgg");
+    $('#myForm').submit(function(e) {
+        e.preventDefault();
+        console.log('lllllllll');
+        // get all the inputs into an array.
+        var $inputs = $('#myForm :input');
+        console.log($inputs);
+        
+        var a; 
+        var b;
+        $inputs.each(function() {
+            //console.log(this);
+
+            if (this.type == 'email'){
+            a=$(this).val();
+            console.log(a);
+        }else if(this.type =='password'){
+            b=$(this).val();
+            console.log(b);
+        }
+        });
 
         $.ajax({
             type: 'GET',
@@ -17,8 +33,8 @@ $(function(){
                 console.log('success', freelancers);
                 $.each(freelancers, function(i, freelancer){
                     //displayFreelancers(freelancer);
-                   console.log(freelancer.password);
-                   if(freelancer.password==$password.val() && freelancer.email==$email.val()) { 
+                
+                   if(freelancer.password==b && freelancer.email== a) { 
                     localStorage.setItem('myid', JSON.stringify(freelancer.id));
                     window.location.href="dashboard.html";
                     return -1;
@@ -37,4 +53,7 @@ $(function(){
 
 
 
-})
+    });
+    
+
+    
