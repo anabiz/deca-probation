@@ -31,7 +31,7 @@ $(function(){
        
                     "<div class='col-sm-9'>" +
                         "<p>"+
-                            "<strong>firstname: </strong>" + "<span class='noedit name'>" + freelancer.name+ "</span>"+
+                            "<strong>Name: </strong>" + "<span class='noedit name'>" + freelancer.name+ "</span>"+
                             
                         "</p>" +
 
@@ -41,17 +41,17 @@ $(function(){
                         "</p>" +
                          
                         "<p>"+ 
-                            "<strong>Your phone Number: </strong>"+ "<span class='noedit phone'>" + freelancer.phone + "</span>" +
+                            "<strong>Phone Number: </strong>"+ "<span class='noedit phone'>" + freelancer.phone + "</span>" +
                             
                         "</p>" +
 
                         "<p>" + 
-                            "<strong>Your Email: </strong>"+ "<span class='noedit profile'>" + freelancer.email + "</span>" +
+                            "<strong>Email: </strong>"+ "<span class='noedit profile'>" + freelancer.email + "</span>" +
                             
                         "</p>" +
 
                         "<p>"+
-                            "<strong>Your Profile: </strong>" + "<span class='noedit email'>" + freelancer.profile + "</span>" +
+                            "<strong>Profile: </strong>" + "<span class='noedit email'>" + freelancer.profile + "</span>" +
                             
                         "</p>" +
 

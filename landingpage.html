@@ -42,21 +42,31 @@
 <body style="background-color:floralwhite">
   
 
-<nav class="navbar navbar-default" style="text-emphasis-color: cornflowerblue">
+<nav class="navbar navbar-default  navbar-fixed-top" style="text-emphasis-color: cornflowerblue">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="">Anabiz</a>
     </div>
     <ul class="nav navbar-nav navbar-nav mr-auto">
       <li class="active"><a href="">Home</a></li>
-      <li><a href="signup.html">sign up</a></li>
-        <li><a href="login.html">login</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">categories
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li id="teacher"><a href="#">Teachers</a></li>
+          <li id="agric"><a href="#">Agric Enteprenuers</a></li>
+          <li id="builder"><a href="#">Builders/Enginers</a></li>
+          <li id="fashion"><a href="#">Fashion Designers</a></li>
+          <li id="ict"><a href="#">ICT</a></li>
+          <li id="others"><a href="#">others</a></li>
+        </ul>
+      </li>
     </ul>
 
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
 
   </div>
 </nav>
@@ -77,36 +87,23 @@
     <div class="row">
       <div class="col-sm-4" id="teacher">
         <p class="text-center"><strong>Teachers</strong></p><br>
-        <a href="#demo" data-toggle="collapse">
+        <a>
           <img src="images/teacher.jpg" class="img-circle person" alt="Random Name" width="255" height="255"  style="margin-left: 50px;">
         </a>
-        <div id="demo" class="collapse">
-          <p>Guitarist and Lead Vocalist</p>
-          <p>Loves long walks on the beach</p>
-          <p>Member since 1988</p>
-        </div>
       </div>
+
       <div class="col-sm-4" id="ict" style="align-content: center;">
         <p class="text-center"><strong>ICT</strong></p><br>
-        <a href="#demo2" data-toggle="collapse">
+        <a>
           <img src="images/ict1.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
         </a>
-        <div id="demo2" class="collapse">
-          <p>Drummer</p>
-          <p>Loves drummin'</p>
-          <p>Member since 1988</p>
-        </div>
       </div>
+
       <div class="col-sm-4" id="builder">
         <p class="text-center"><strong>Builders</strong></p><br>
-        <a href="#demo3" data-toggle="collapse">
+        <a>
           <img src="images/builder.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
         </a>
-        <div id="demo3" class="collapse">
-          <p>Bass player</p>
-          <p>Loves math</p>
-          <p>Member since 2005</p>
-        </div>
       </div>
     </div>
   
@@ -115,36 +112,24 @@
       <div class="row">
         <div class="col-sm-4" id="fashion"  style="align-content: center;">
           <p class="text-center"><strong>Fashion</strong></p><br>
-          <a href="#demo" data-toggle="collapse">
+          <a>
             <img src="images/fashion.jpg" class="img-circle person" alt="Random Name" width="255" height="255"  style="margin-left: 50px;">
           </a>
-          <div id="demo" class="collapse">
-            <p>Guitarist and Lead Vocalist</p>
-            <p>Loves long walks on the beach</p>
-            <p>Member since 1988</p>
-          </div>
         </div>
+
         <div class="col-sm-4" id="agric">
           <p class="text-center"><strong>Agric</strong></p><br>
-          <a href="#demo2" data-toggle="collapse">
+          <a >
             <img src="images/agric.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
           </a>
-          <div id="demo2" class="collapse">
-            <p>Drummer</p>
-            <p>Loves drummin'</p>
-            <p>Member since 1988</p>
-          </div>
+         
         </div>
         <div class="col-sm-4" id="others">
           <p class="text-center"><strong>Others</strong></p><br>
-          <a href="#demo3" data-toggle="collapse">
+          <a>
             <img src="images/ict.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
           </a>
-          <div id="demo3" class="collapse">
-            <p>Bass player</p>
-            <p>Loves math</p>
-            <p>Member since 2005</p>
-          </div>
+          
         </div>
       </div>
   
