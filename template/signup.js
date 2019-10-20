@@ -38,7 +38,7 @@ $(function(){
             console.log('success', freelancer);
             console.log('success', freelancer.id);
             localStorage.setItem('myid', JSON.stringify(freelancer.id));
-            window.location.href="dashboard.html";
+            window.location.href="../dashboard.html";
         },
         error: function(){
             alert('error creating account data');
@@ -46,5 +46,48 @@ $(function(){
     });
 
 });
+
+
+
+
+$('#btnUploadFile').on('click', function () {
+    console.log('gtreeeeeeee');
+    var data = new FormData();
+    var files = $("#fileUpload").get(0).files;
+
+    // Add the uploaded file content to the form data collection
+    if (files.length > 0) {
+        data.append("upload", files[0]);
+    }
+
+    // Make Ajax request with the contentType = false, and procesDate = false
+    var ajaxRequest = $.ajax({
+        type: "POST",
+        url:  'http://localhost:3000/bookings',
+        contentType: false,
+        processData: false,
+        data: data,
+
+        error: function (xhr, status, error) {
+            console.log(xhr);
+            console.log(status);
+            console.log(error);
+            console.log(data);
+        }
+    });
+
+    ajaxRequest.done(function (xhr, textStatus) {
+        console.log('uuuuuuuuuuuuuuuuuuu');
+       // $("#response").attr('class', "alert alert-success");
+       // $("#response").html("File uploaded successfully");
+    });
+
+
+});
+
+
+
+
+
 
 });

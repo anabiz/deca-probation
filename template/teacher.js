@@ -11,7 +11,7 @@ $(function(){
                     //displayFreelancers(freelancer);
                     if(freelancer.job =="teacher") {
                     $free.append(
-                    "<div class='col-sm-6 card' style='width: 18rem; margin-right:50px;margin-bottom:50px'>"+
+                    "<div class='col-sm-6 card' style='width: 18rem; margin-right:50px;margin-bottom:50px;'>"+
                     "<!--<img class='card-img-top' src='../images/computer.jpg' style='width: 18rem;' alt='profile picture'>-->"+
                     "<img class='card-img-top'  style='height:150px; width:20rem; border-radius:50px' src='../images/" + freelancer.image + "'>" +    
                     "<div class='card-body'>"+

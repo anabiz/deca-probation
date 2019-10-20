@@ -22,7 +22,7 @@ $(function(){
                 "<div class='row' style='height:200px; margin-bottom:50px;'>" + 
 
                     "<div class='col-sm-3'>" +
-                        "<img style='height:150px; width:150px; border-radius:50px' src='images/"+ freelancer.image + "'>" +
+                        "<img style='height:150px; width:150px; border-radius:50px' classs='imag' src='images/"+ freelancer.image + "'>" +
                         "<input class='edit image' />" +
                     "</div>" +
        
@@ -62,10 +62,10 @@ $(function(){
                             "<strong>id: </strong>"+ freelancer.id + 
                         "</p>" + 
                         "<div class='mybuttons'>" +
-                        "<button class='remove' style='margin:20px' data-id=" + freelancer.id + " >Delete Account </button>" +
-                        "<button style='margin:20px' class='editfreelancer noedit'> Edit Profile</button>" +
-                       "<button style='margin:20px' class='saveEdit edit'>Save </button>" +
-                       "<button style='margin:20px' class='cancelEdit edit' style='list'> Cancel</button>" +
+                        "<button class='remove  btn btn-primary' style='margin:20px' data-id=" + freelancer.id + " >Delete Account </button>" +
+                        "<button style='margin:20px' class='editfreelancer noedit btn btn-primary'> Edit Profile</button>" +
+                       "<button style='margin:20px' class='saveEdit edit btn btn-primary' >Save </button>" +
+                       "<button style='margin:20px' class='cancelEdit edit  btn btn-primary' style='list'> Cancel</button>" +
                        "</div>" +
                         "<hr style='color:green;>"+
                         "<hr style='color:red;'>"+
@@ -82,10 +82,10 @@ $(function(){
 
 $(document).on('click', '.editfreelancer', function () {
     console.log("ggpppppppppppppgg");
-    console.log($('span.name').html());
+    console.log($('img.src').html());
     $('.edit').show();
     $('.noedit').hide();
-    $('input.image').val($('img.src').html());
+    $('input.image').val($('img.imag').html());
     $('input.name').val($('span.name').html());
     $('input.job').val($('span.job').html());
     $('input.phone').val($('span.phone').html());
@@ -167,13 +167,13 @@ $.ajax({
                        
                     "<div>" +
                         "<p>"+
-                            "<strong>Name: </strong>" + "<span class='noedit name'>" + freelancer.project+ "</span>"+
+                            "<strong>Project Description: </strong>" + "<span class='noedit name'>" + freelancer.project+ "</span>"+
                             "<input class='edit name' />" +
                             
                         "</p>" +
 
                         "<p>"+ 
-                            "<strong>Job: </strong>"+ "<span class='noedit job'>" + freelancer.name + "</span>"+
+                            "<strong>Name: </strong>"+ "<span class='noedit job'>" + freelancer.name + "</span>"+
                             "<input class='edit job' />" +
                         "</p>" +
                       

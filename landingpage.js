@@ -13,24 +13,7 @@ $(function(){
         //$free.append(mustache.render(displayFreelancers, freelancer));
     //}
 
-    $.ajax({
-        type: 'GET',
-        url: 'http://localhost:3000/freelancer/8',
-        success: function(freelancer){
-            //console.log('success', freelancer);
-           
-            //console.log( freelancer.booking[0].comment);
-            //freelancer.booking[0].job="teacher";
-            //console.log( freelancer.booking[0].job);
-            //console.log(freelancer);
-
-           
-        
-        },
-        error: function(){
-            alert('error getting data');
-        }
-    })
+   
 
    
     $(document).on('click', '#ict', function () {

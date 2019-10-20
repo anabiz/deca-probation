@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <script src="file:///C:/Users/Anabiz/deca-probation/signup.js"></script>
+  
 </head>
 <style>
   img{
@@ -24,9 +24,9 @@
       <a class="navbar-brand" href="">Anabiz</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="landingpage.html">Home</a></li>
-      <li><a href="#">sign up</a></li>
-        <li><a href="login.html">login</a></li>
+      <li class="active"><a href="../landingpage.html">Home</a></li>
+     
+        <li><a href="../login.html">login</a></li>
     </ul>
   </div>
 </nav>
@@ -68,14 +68,13 @@
             </div>
           </div>
 
-
-
           <div class="form-group">
             <label class="control-label col-sm-2" for="email">Email:</label>
             <div class="col-sm-5">
               <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
             </div>
           </div>
+
           <div class="form-group">
             <label class="control-label col-sm-2" for="pwd">Password:</label>
             <div class="col-sm-5">          
@@ -83,23 +82,34 @@
             </div>
           </div>
 
+         <!-- <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd">image</label>
+              <div class="col-sm-5">          
+                <input type="file" id="file" name="file" size="10"/>
+             </div>
+         </div>-->
+
       <div class="form-group">        
         <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" class="btn btn-default" id="button">Submit</button>
         </div>
       </div>
     </form>
-  
-  </div>
-</div>
 
+<div>
+    <from id="formContent" method="post" enctype="multipart/form-data">
+      <span>File</span>
+      <input type="file" id="fileUpload" name="file" size="10"/>
+      <input id="btnUploadFile" type="submit" value="Upload"/>
+  </form>
+</div>
 
   
 </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   
-  <script src="file:///C:/Users/Anabiz/deca-probation/signup.js"></script>
+  <script src="file:///C:/Users/Anabiz/deca-probation/template/signup.js"></script>
 
   
   

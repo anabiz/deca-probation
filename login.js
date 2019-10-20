@@ -33,15 +33,21 @@ $(function(){
                 console.log('success', freelancers);
                 $.each(freelancers, function(i, freelancer){
                     //displayFreelancers(freelancer);
+                    //console.log(i);
+                    console.log(freelancers.length)
                 
                    if(freelancer.password==b && freelancer.email== a) { 
+                       console.log(i);
                     localStorage.setItem('myid', JSON.stringify(freelancer.id));
                     window.location.href="dashboard.html";
-                    return -1;
+                    //break;
 
-                   }
+                   }//else if(i+1 == freelancers.length){
+                       //alert('Incorrect password or email');
+                   //}
   
-                })
+                });
+            
             
             },
             error: function(){
@@ -50,7 +56,7 @@ $(function(){
         });
     });
 
-
+    //alert('errorrrrrrrr');
 
 
     });
