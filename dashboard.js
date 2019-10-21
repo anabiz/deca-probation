@@ -9,7 +9,7 @@ $(function(){
     var id2 =JSON.parse(localStorage.getItem('myid'));
     console.log(id2);
     var $logout = $('#logout');
-
+    var bb ='';
 
     $.ajax({
         type: 'GET',
@@ -17,11 +17,12 @@ $(function(){
         success: function(freelancer){
             console.log('success', freelancer);
             $span.text(freelancer.name);
+            bb += freelancer.image;
 
             $free.append(
                 "<div class='row' style='height:200px; margin-bottom:50px;'>" + 
 
-                    "<div class='col-sm-3'>" +
+                    "<div class='col-sm-3' id='image1'>" +
                         "<img style='height:150px; width:150px; border-radius:50px' classs='imag' src='images/"+ freelancer.image + "'>" +
                         "<input class='edit image' />" +
                     "</div>" +
@@ -79,13 +80,17 @@ $(function(){
         }
     })
 
+console.log($('.row #image1 img').attr('src'));
+console.log($('#image1').find('tag').attr('src'));
+console.log($('#image1').prop('src'));
 
 $(document).on('click', '.editfreelancer', function () {
+    console.log($('#image1').prop('src'));
     console.log("ggpppppppppppppgg");
     console.log($('img.src').html());
     $('.edit').show();
     $('.noedit').hide();
-    $('input.image').val($('img.imag').html());
+    $('input.image').val( bb);
     $('input.name').val($('span.name').html());
     $('input.job').val($('span.job').html());
     $('input.phone').val($('span.phone').html());
@@ -94,7 +99,9 @@ $(document).on('click', '.editfreelancer', function () {
     $('input.password').val($('span.password').html());
 });
 
-$(document).on('click', '.saveEdit', function () {
+
+
+ $(document).on('click', '.saveEdit', function () {
     console.log($('Input.name').val());
     var freelancer = {
         image:$('input.image').val(),
@@ -105,6 +112,9 @@ $(document).on('click', '.saveEdit', function () {
         profile:$('Input.profile').val(),
         password:$('Input.password').val(),
     };
+
+
+    
 
     $.ajax({
         type: 'PUT',
@@ -129,6 +139,23 @@ $(document).on('click', '.saveEdit', function () {
     });       
 
 });
+
+
+
+$(document).on('click', '.cancelEdit', function () {
+   
+            $('.noedit').show();
+            $('.edit').hide();
+
+    });       
+
+
+
+
+
+
+
+
 
 
 $(document).on('click', '.remove', function () {

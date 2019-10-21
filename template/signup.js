@@ -8,6 +8,7 @@ $(function(){
     var $profile = $('#profile');
     var $email = $('#email');
     var $password = $('#pwd');
+    var $image = $('#file');
     //var $mail=$("input[name='email']").val();
     
 
@@ -16,6 +17,9 @@ $(function(){
         e.preventDefault();
         
         console.log($email.val());
+        console.log($image.val());
+        var a=$image.val().slice(12, $image.val().length);
+        console.log(a);
         
     var freelance = {
         name: $name.val(),
@@ -24,6 +28,7 @@ $(function(){
         email: $email.val(),
         password:$password.val(),
         profile: $profile.val(),
+        image:a,
 
         
     }
