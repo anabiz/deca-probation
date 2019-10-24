@@ -20,9 +20,9 @@ $(function(){
             bb += freelancer.image;
 
             $free.append(
-                "<div class='row' style='height:200px; margin-bottom:50px;'>" + 
+                "<div class='row' style='height:200px; margin-bottom:50px;border-bottom:2px solid Violet'>" + 
 
-                    "<div class='col-sm-3' id='image1'>" +
+                    "<div class='col-sm-3' id='image1' >" +
                         "<img style='height:150px; width:150px; border-radius:50px' classs='imag' src='images/"+ freelancer.image + "'>" +
                         "<input class='edit image' />" +
                     "</div>" +
@@ -59,7 +59,7 @@ $(function(){
                             "<input class='edit password' />" +
                         "</p>" +
    
-                        "<p>" +
+                        "<p >" +
                             "<strong>id: </strong>"+ freelancer.id + 
                         "</p>" + 
                         "<div class='mybuttons'>" +
@@ -190,7 +190,7 @@ $.ajax({
                 console.log( singleBooking.bookingid);
                 //console.log( freelancer);
        $booking.append(
-        "<div class='col-sm-4' style='height:200px'>" + 
+        "<div class='col-sm-4' style='height:150px;border-left:2px solid Violet; margin-bottom:30px'>" + 
                        
                     "<div>" +
                         "<p>"+
@@ -206,6 +206,11 @@ $.ajax({
                         "<p>"+
                             "<strong>Email: </strong>" + "<span >" + singleBooking.email + "</span>" +
                         "</p>" +
+
+                        "<p style='color:Violet;'>"+ 
+                             "<span >" + "<i>"+ "Booked on " + singleBooking.bookingtime + "</i>" + "</span>"+
+                        "</p>" +
+                      
    
                         "</div>" +
 

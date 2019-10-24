@@ -23,7 +23,7 @@ $(function(){
             console.log($jdata);
 
             $free.append(
-                "<div class='row' style='height:200px'>" + 
+                "<div class='row' style='height:200px; border-bottom:2px solid Violet'>" + 
 
                     "<div class='col-sm-3 shadow-sm p-3 mb-5 bg-white rounded'>" +
                         "<img style='height:150px; width:150px; border-radius:50px' src='../images/" + freelancer.image + "'>" +
@@ -82,6 +82,13 @@ $(function(){
         // not sure if you wanted this, but I thought I'd add it.
         // get an associative array of just the values.
         //var values = {};
+        var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+
+        var postDay = dat1.getDate();
+        var postMonth = months[dat1.getMonth() + 1];
+        var postYear = dat1.getFullYear();
+        var bookingTime = postMonth + " " + postDay + ", " + postYear + "."
+        console.log(bookingTime);
         var a; 
         var b;
         var c;
@@ -108,7 +115,8 @@ $(function(){
             name:a,
             email:b,
             project:c,
-            bookingid: id1
+            bookingid: id1,
+            bookingtime:bookingTime
         
         };
         console.log(dat);
