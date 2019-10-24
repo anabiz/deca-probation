@@ -181,34 +181,30 @@ var $booking = $('#booking');
 $.ajax({
     type: 'GET',
     url: 'http://localhost:3000/bookings',
-    success: function(freelancers){
-        console.log('success', freelancers);
-        $.each(freelancers, function(i, freelancer){
+    success: function(bookings){
+        console.log('success', bookings);
+        $.each(bookings, function(i, singleBooking){
 
-            if(freelancer.bookingid == id2){
+            if(singleBooking.bookingid == id2){
                 counter +=1;
-                console.log( freelancer.bookingid);
+                console.log( singleBooking.bookingid);
                 //console.log( freelancer);
        $booking.append(
         "<div class='col-sm-4' style='height:200px'>" + 
                        
                     "<div>" +
                         "<p>"+
-                            "<strong>Project Description: </strong>" + "<span class='noedit name'>" + freelancer.project+ "</span>"+
-                            "<input class='edit name' />" +
-                            
+                            "<strong>Project Description: </strong>" + "<span >" + singleBooking.project+ "</span>"+
                         "</p>" +
 
                         "<p>"+ 
-                            "<strong>Name: </strong>"+ "<span class='noedit job'>" + freelancer.name + "</span>"+
-                            "<input class='edit job' />" +
+                            "<strong>Name: </strong>"+ "<span >" + singleBooking.name + "</span>"+
                         "</p>" +
                       
                         "</p>" +
 
                         "<p>"+
-                            "<strong>Email: </strong>" + "<span class='noedit email'>" + freelancer.email + "</span>" +
-                            "<input class='edit email' />" +
+                            "<strong>Email: </strong>" + "<span >" + singleBooking.email + "</span>" +
                         "</p>" +
    
                         "</div>" +
