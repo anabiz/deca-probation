@@ -1,2 +1,4 @@
 # deca-probation
-my decagon probation project, a repeat of decagon boot-camp project.
+web app that allows freelancer to advertise their skills by create an account and employer can use the app to find and employer a freelancer.
+
+
